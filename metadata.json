@@ -1,0 +1,6 @@
+{
+  "name": "중세 기사단 점심 퀘스트 룰렛 (Medieval Guild Lunch Roulette)",
+  "description": "중세 판타지 기사단 테마의 점심 메뉴 결정 룰렛. 국밥, 돈까스, 마라탕, 학식, 편의점 메뉴와 골드 내기 모드 지원",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #1a1410;
+    color: #f3e5d0;
+  }
+}
+
+.font-medieval {
+  font-family: 'MedievalSharp', cursive, serif;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', Georgia, serif;
+}
+
+.font-jua {
+  font-family: 'Jua', 'Noto Sans KR', sans-serif;
+}
+
+/* Medieval parchment box styling */
+.parchment-panel {
+  background: radial-gradient(circle at 50% 30%, #fff6e0 0%, #faebd0 50%, #edd8b4 100%);
+  color: #382414;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), inset 0 0 40px rgba(180, 83, 9, 0.15);
+  border: 3px solid #b45309;
+}
+
+.parchment-panel-dark {
+  background: radial-gradient(circle at 50% 20%, #2a2018 0%, #1e1610 60%, #150f0b 100%);
+  color: #f3e5d0;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.8), inset 0 0 25px rgba(0, 0, 0, 0.5);
+  border: 2px solid #854d0e;
+}
+
+.wood-button {
+  background: linear-gradient(180deg, #92400e 0%, #78350f 50%, #451a03 100%);
+  border: 2px solid #d97706;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  color: #fef3c7;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.wood-button:hover:not(:disabled) {
+  background: linear-gradient(180deg, #b45309 0%, #92400e 50%, #592205 100%);
+  border-color: #f59e0b;
+  box-shadow: 0 6px 16px rgba(217, 119, 6, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.gold-glow {
+  box-shadow: 0 0 25px rgba(245, 158, 11, 0.45);
+}
+
+/* Torch flame flicker effect */
+@keyframes flame-flicker {
+  0%, 100% {
+    opacity: 0.85;
+    transform: scale(1);
+  }
+  25% {
+    opacity: 1;
+    transform: scale(1.08) translateY(-1px);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(0.96) translateX(1px);
+  }
+  75% {
+    opacity: 1;
+    transform: scale(1.04) translateY(-1px);
+  }
+}
+
+.animate-flicker {
+  animation: flame-flicker 2s infinite ease-in-out;
+}
